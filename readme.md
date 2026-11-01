@@ -1,28 +1,61 @@
-# Collection Manipulator – Student Data Organizer
+# Functional Treat — Data Analyzer and Transformer
 
 ## Description
-A Python console application that manages student records using List, Tuple, Set, and Dictionary. Demonstrates string formatting, mutability/immutability, type casting, and the `del` keyword.
+A menu-driven console program that analyses and transforms **1D and 2D lists**
+while showcasing built-in functions, user-defined functions, `*args`,
+`**kwargs`, `__doc__`, recursion, lambda functions, the `global` keyword,
+multiple return values, and sorting with `sort()` vs `sorted()`.
 
 ## Features
-- Add, display, update, delete students.
-- Store ID and DOB as an immutable tuple.
-- Maintain a set of unique subjects.
-- Use a dictionary for fast lookup by student ID.
-- Menu-driven interface with input validation.
+- **Input Data** — manual 1D / 2D entry or two ready-made sample datasets.
+- **Built-in Summary** — `len()`, `sum()`, `min()`, `max()`, `sorted()`.
+- **Recursion** — factorial and Fibonacci, both implemented purely recursively.
+- **Lambda Filter** — `filter(lambda x: …)` with ≥ / < threshold modes.
+- **Lambda Map** — `map(lambda x: …)` to square, double, multiply, add, or stringify.
+- **Sorting** — `list.sort()` (in-place, 1D) and `sorted()` (new list, 2D rows).
+- **Multiple Returns** — `get_dataset_statistics()` returns `(min, max, sum, avg)`.
+- **Advanced** — `*args` demo, `**kwargs` dataset-summary, duplicate & unique finders.
+- **__doc__ Viewer** — prints every function's docstring from the menu.
+- **2D Grid** — formatted display of a nested list.
+- **Exit Option** — option 11 in the main menu.
+
+## Project Structure
+Functional-Treat/
+│
+├── functional_treat.py
+├── README.md
+└── sample_output.txt (optional)
 
 ## Assumptions
-- Student ID is an integer.
-- Date of Birth is a string in YYYY-MM-DD format.
-- Subjects are entered as comma-separated values.
-- Data is not persisted to disk.
+- Console-based; no third-party dependencies required.
+- `DATASET` is a module-level global holding a 1D list or a 2D nested list.
+- Numeric input is parsed as `int` when there is no `.`, otherwise `float`.
+- Factorial is defined for `n >= 0`; Fibonacci is 0-indexed.
+- Lambda filter option **1** = "≥ threshold"; option **2** = "< threshold".
+- `sort()` mutates the global `DATASET` in place (1D). `sorted()` returns a new
+  list of sorted rows for 2D data — the original `DATASET` is unchanged.
+- Empty dataset => friendly "No data available" messages (no crash).
 
 ## How to Run
-1. Ensure Python 3.x is installed.
-2. Clone the repository.
-3. Run: `python student_data_organizer.py`
+```bash
+python functional_treat.py
 
-## Sample Output
-(Include the sample output from above)
+## Concepts Demonstrated
+
+| Concept | Where |
+| --- | --- |
+| Built-in functions | `display_data_summary()` |
+| User-defined functions | `find_duplicates()`, `find_unique()`, `flatten_2d()`, … |
+| `*args` | `show_args_demo(*args)` |
+| `**kwargs` | `show_kwargs_demo(**kwargs)` |
+| `__doc__` | `show_function_documentation()` |
+| Recursion | `calculate_factorial()`, `calculate_fibonacci()` |
+| Lambda | `filter(lambda …)`, `map(lambda …)` |
+| `global` keyword | `update_global_summary()` |
+| Multiple return values | `get_dataset_statistics()` |
+| 1D / 2D lists | `input_data()`, `display_2d_grid()` |
+| `sort()` vs `sorted()` | `sort_data()` |
 
 ## Author
+
 [dev patel]
