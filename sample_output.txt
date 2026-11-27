@@ -1,0 +1,21 @@
+PR7: MULTI-UTILITY TOOLKIT
+1. Date and Time Utilities
+2. Mathematical Utilities
+3. Random Utilities
+4. UUID Generator
+5. File Operations
+6. Dynamic Module Exploration
+7. Exit
+Enter your choice (1-7): 2
+
+--- MATHEMATICAL UTILITIES ---
+1. Factorial
+2. Compound interest
+3. Trigonometry (degrees)
+4. Area calculator
+0. Back
+Choose an option: 1
+Enter a non-negative integer: 5
+5! = 120
+
+Press Enter to return to the main menu...
